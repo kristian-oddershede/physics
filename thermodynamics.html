@@ -1,68 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Thermodynamics - Basics of Physics</title>
-<style>
-  /* Same styles as index.html */
-  * { box-sizing: border-box; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; background: #f5f7fa; color: #333;
-  }
-  a { text-decoration: none; color: #0366d6; transition: color 0.3s ease; }
-  a:hover { color: #004085; }
-  header {
-    background: #1e2a38; color: white;
-    padding: 1rem 2rem;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-  }
-  header h1 { margin: 0; font-weight: 600; font-size: 1.6rem; }
-  nav {
-    display: flex; flex-wrap: wrap; gap: 1rem;
-  }
-  nav a {
-    padding: 0.5rem 1rem;
-    background: #2c3e50;
-    border-radius: 4px;
-    color: white;
-    font-weight: 600;
-    user-select: none;
-  }
-  nav a.active, nav a:hover {
-    background: #0366d6;
-    color: white;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: white;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
-    border-radius: 8px;
-  }
-  h2 { color: #1e2a38; }
-  p { line-height: 1.6; margin-bottom: 1rem; }
-  footer {
-    text-align: center;
-    margin: 2rem 0;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  @media (max-width: 600px) {
-    header { justify-content: center; }
-    nav { justify-content: center; width: 100%; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thermodynamics - Basics of Physics</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- MathJax for rendering LaTeX math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
+  <header>
+    <h1>Basics of Physics</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="electromagnetism.html">Electromagnetism</a>
+      <a href="quantum_mechanics.html">Quantum Mechanics</a>
+      <a href="thermodynamics.html" class="active">Thermodynamics</a>
+      <a href="nuclear_physics.html">Nuclear Physics</a>
+      <a href="atomic_optical.html">Atomic &amp; Optical Physics</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Basics of Physics</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="mechanics.html">Mechanics</a>
-    <a href="electromagnetism.html">Electromagnetism</a>
-    <a href="quantum.html">Quantum Mechanics</a>
-    <a href="thermodynamics
+  <main>
+    <section>
+      <h2>What is Thermodynamics?</h2>
+      <p>
+        Thermodynamics is the branch of physics that deals with heat, work, temperature, and the statistical behavior of systems with many particles. It provides fundamental principles governing energy transfer and the direction of physical processes.
+      </p>
+    </section>
+
+    <section class="main-box">
+      Main thing to know: <br />
+      <strong>The Laws of Thermodynamics</strong> describe the fundamental principles of energy conservation, entropy, and equilibrium.
+    </section>
+
+    <section>
+      <h2>Key Equations in Thermodynamics</h2>
+
+      <div class="equation">
+        \[
+          \Delta U = Q - W
+        \]
+        <div class="equation-desc">First Law of Thermodynamics: the change in internal energy \( \Delta U \) equals heat added to the system \( Q \) minus work done by the system \( W \).</div>
+      </div>
+
+      <p>
+        This expresses the conservation of energy principle.
+      </p>
+
+      <div class="equation">
+        \[
+          \Delta S \geq 0
+        \]
+        <div class="equation-desc">Second Law of Thermodynamics: the entropy \( S \) of an isolated system never decreases.</div>
+      </div>
+
+      <p>
+        Entropy measures the disorder or randomness in a system.
+      </p>
+
+      <div class="equation">
+        \[
+          PV = nRT
+        \]
+        <div class="equation-desc">Ideal Gas Law: relates pressure \( P \), volume \( V \), temperature \( T \), and amount of gas \( n \).</div>
+      </div>
+
+      <p>
+        A key equation for gases in many practical situations.
+      </p>
+
+      <div class="equation">
+        \[
+          \Delta G = \Delta H - T \Delta S
+        \]
+        <div class="equation-desc">Gibbs Free Energy: determines spontaneity of a process at constant temperature and pressure.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Further Details</h2>
+
+      <h3>The Four Laws of Thermodynamics</h3>
+      <ul>
+        <li><strong>Zeroth Law:</strong> If two systems are each in thermal equilibrium with a third system, they are in equilibrium with each other.</li>
+        <li><strong>First Law:</strong> Energy conservation (heat and work).</li>
+        <li><strong>Second Law:</strong> Entropy of isolated systems never decreases; direction of natural processes.</li>
+        <li><strong>Third Law:</strong> Entropy approaches a constant minimum at absolute zero temperature.</li>
+      </ul>
+
+      <h3>Applications of Thermodynamics</h3>
+      <ul>
+        <li>Heat engines and refrigerators</li>
+        <li>Chemical reactions and phase changes</li>
+        <li>Atmospheric and climate science</li>
+        <li>Biological systems and energy transfer</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Basics of Physics. All rights reserved.
+  </footer>
+</body>
+</html>
