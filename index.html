@@ -1,99 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Basics of Physics - Home</title>
-<style>
-  * { box-sizing: border-box; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; background: #f5f7fa; color: #333;
-  }
-  a { text-decoration: none; color: #0366d6; transition: color 0.3s ease; }
-  a:hover { color: #004085; }
-  header {
-    background: #1e2a38; color: white;
-    padding: 1rem 2rem;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-  }
-  header h1 { margin: 0; font-weight: 600; font-size: 1.6rem; }
-  nav {
-    display: flex; flex-wrap: wrap; gap: 1rem;
-  }
-  nav a {
-    padding: 0.5rem 1rem;
-    background: #2c3e50;
-    border-radius: 4px;
-    color: white;
-    font-weight: 600;
-    user-select: none;
-  }
-  nav a.active, nav a:hover {
-    background: #0366d6;
-    color: white;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: white;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
-    border-radius: 8px;
-  }
-  h2 { color: #1e2a38; }
-  p, ul { line-height: 1.6; margin-bottom: 1rem; }
-  footer {
-    text-align: center;
-    margin: 2rem 0;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  @media (max-width: 600px) {
-    header { justify-content: center; }
-    nav { justify-content: center; width: 100%; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Basics of Physics</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <h1>Basics of Physics</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="electromagnetism.html">Electromagnetism</a>
+      <a href="quantum_mechanics.html">Quantum Mechanics</a>
+      <a href="thermodynamics.html">Thermodynamics</a>
+      <a href="nuclear_physics.html">Nuclear Physics</a>
+      <a href="atomic_optical.html">Atomic &amp; Optical Physics</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Basics of Physics</h1>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="mechanics.html">Mechanics</a>
-    <a href="electromagnetism.html">Electromagnetism</a>
-    <a href="quantum.html">Quantum Mechanics</a>
-    <a href="thermodynamics.html">Thermodynamics</a>
-    <a href="nuclear.html">Nuclear Physics</a>
-    <a href="atomic.html">Atomic &amp; Optical Physics</a>
-  </nav>
-</header>
+  <main>
+    <section>
+      <h2>What is Physics?</h2>
+      <p>
+        Physics is the natural science that studies matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. It seeks to understand how the universe behaves at the most fundamental level.
+      </p>
+    </section>
 
-<main>
-  <h2>Welcome to Physics</h2>
-  <p>Physics is the fundamental science that seeks to understand the nature and properties of matter and energy. It explores the universe's behavior, from the smallest particles to the largest galaxies.</p>
-  <p>Physicists use observation, experimentation, and mathematical models to describe and predict natural phenomena. Its principles underpin many technologies that shape modern life.</p>
+    <section>
+      <h2>Key Methodologies in Physics</h2>
+      <p>
+        Physics relies on a combination of observation, experimentation, and mathematical modeling. The scientific method is used extensively, involving hypothesis formulation, controlled experiments, data collection, and analysis to validate or refute theories.
+      </p>
+    </section>
 
-  <h3>Key Methodologies of Physics</h3>
-  <ul>
-    <li><strong>Theoretical Analysis:</strong> Developing mathematical models and theories to explain phenomena.</li>
-    <li><strong>Experimental Observation:</strong> Designing and conducting experiments to test hypotheses.</li>
-    <li><strong>Simulation and Computation:</strong> Using computer models to simulate complex systems.</li>
-  </ul>
+    <section>
+      <h2>Experiments in Physics</h2>
+      <p>
+        Experiments are crucial in physics to test predictions and uncover new phenomena. From classical setups like pendulums and inclined planes to modern particle accelerators and quantum optics labs, experimentation grounds theoretical physics in empirical evidence.
+      </p>
+    </section>
+  </main>
 
-  <h3>Experiments in Physics</h3>
-  <p>Experiments are critical to validate theories and discover new physical laws. Classic experiments include:</p>
-  <ul>
-    <li>Galileo’s Inclined Plane experiments — studying motion.</li>
-    <li>Young’s Double-Slit experiment — demonstrating the wave nature of light.</li>
-    <li>Millikan Oil Drop experiment — measuring the charge of the electron.</li>
-  </ul>
-</main>
-
-<footer>
-  &copy; 2025 Basics of Physics | Created by ChatGPT
-</footer>
-
+  <footer>
+    &copy; 2025 Basics of Physics. All rights reserved.
+  </footer>
 </body>
 </html>
