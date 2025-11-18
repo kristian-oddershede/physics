@@ -1,86 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Electromagnetism - Basics of Physics</title>
-<style>
-  /* Same styles as index.html */
-  * { box-sizing: border-box; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; background: #f5f7fa; color: #333;
-  }
-  a { text-decoration: none; color: #0366d6; transition: color 0.3s ease; }
-  a:hover { color: #004085; }
-  header {
-    background: #1e2a38; color: white;
-    padding: 1rem 2rem;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-  }
-  header h1 { margin: 0; font-weight: 600; font-size: 1.6rem; }
-  nav {
-    display: flex; flex-wrap: wrap; gap: 1rem;
-  }
-  nav a {
-    padding: 0.5rem 1rem;
-    background: #2c3e50;
-    border-radius: 4px;
-    color: white;
-    font-weight: 600;
-    user-select: none;
-  }
-  nav a.active, nav a:hover {
-    background: #0366d6;
-    color: white;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: white;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
-    border-radius: 8px;
-  }
-  h2 { color: #1e2a38; }
-  p { line-height: 1.6; margin-bottom: 1rem; }
-  footer {
-    text-align: center;
-    margin: 2rem 0;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  @media (max-width: 600px) {
-    header { justify-content: center; }
-    nav { justify-content: center; width: 100%; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electromagnetism - Basics of Physics</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <h1>Basics of Physics</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="electromagnetism.html" class="active">Electromagnetism</a>
+      <a href="quantum_mechanics.html">Quantum Mechanics</a>
+      <a href="thermodynamics.html">Thermodynamics</a>
+      <a href="nuclear_physics.html">Nuclear Physics</a>
+      <a href="atomic_optical.html">Atomic &amp; Optical Physics</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Basics of Physics</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="mechanics.html">Mechanics</a>
-    <a href="electromagnetism.html" class="active">Electromagnetism</a>
-    <a href="quantum.html">Quantum Mechanics</a>
-    <a href="thermodynamics.html">Thermodynamics</a>
-    <a href="nuclear.html">Nuclear Physics</a>
-    <a href="atomic.html">Atomic &amp; Optical Physics</a>
-  </nav>
-</header>
+  <main>
+    <section>
+      <h2>What is Electromagnetism?</h2>
+      <p>
+        Electromagnetism is the branch of physics that studies electric and magnetic fields and their interactions with charged particles. It unifies electricity, magnetism, and light as manifestations of the same fundamental force: the electromagnetic force.
+        This force governs phenomena ranging from static electricity to electromagnetic waves, including visible light, radio waves, and X-rays.
+      </p>
+    </section>
 
-<main>
-  <h2>Electromagnetism</h2>
-  <p>Electromagnetism studies electric and magnetic fields and their interactions with matter. It explains phenomena like electricity, magnetism, and light as electromagnetic waves.</p>
-  <p>The fundamental equations governing this field are Maxwell’s equations, which unify electricity, magnetism, and optics.</p>
-  <p>Applications include electrical engineering, communication technologies, and modern electronics.</p>
-</main>
+    <section class="main-box">
+      Main thing to know: <br />
+      <strong>Maxwell’s Equations</strong> describe how electric and magnetic fields are generated and altered by charges and currents.
+    </section>
 
-<footer>
-  &copy; 2025 Basics of Physics | Created by ChatGPT
-</footer>
+    <section>
+      <h2>Key Equations in Electromagnetism</h2>
 
+      <div class="equation">
+        <span>∇ · \mathbf{E} = \frac{\rho}{\varepsilon_0}</span>
+        <div class="equation-desc">Gauss’s Law for Electricity: electric charges produce electric fields.</div>
+      </div>
+
+      <p>
+        The divergence of the electric field <code class="inline-equation">𝐄</code> equals the volume charge density <code class="inline-equation">ρ</code> divided by the permittivity of free space <code class="inline-equation">ε₀</code>.
+      </p>
+
+      <div class="equation">
+        <span>∇ · \mathbf{B} = 0</span>
+        <div class="equation-desc">Gauss’s Law for Magnetism: there are no magnetic monopoles.</div>
+      </div>
+
+      <p>
+        Magnetic field lines <code class="inline-equation">𝐁</code> always form closed loops; isolated magnetic charges do not exist.
+      </p>
+
+      <div class="equation">
+        <span>∇ × \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</span>
+        <div class="equation-desc">Faraday’s Law of Induction: changing magnetic fields create electric fields.</div>
+      </div>
+
+      <p>
+        A time-varying magnetic field induces an electric field, which is the principle behind transformers and electric generators.
+      </p>
+
+      <div class="equation">
+        <span>∇ × \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}</span>
+        <div class="equation-desc">Ampère-Maxwell Law: magnetic fields are generated by electric currents and changing electric fields.</div>
+      </div>
+
+      <p>
+        The curl of the magnetic field <code class="inline-equation">𝐁</code> is related to the current density <code class="inline-equation">𝐉</code> and the time derivative of the electric field.
+      </p>
+    </section>
+
+    <section>
+      <h2>Further Details</h2>
+      <h3>Electric and Magnetic Fields</h3>
+      <p>
+        Electric fields are generated by electric charges and exert forces on other charges. Magnetic fields arise from moving charges (currents) and affect moving charges or magnetic materials.
+      </p>
+
+      <h3>Electromagnetic Waves</h3>
+      <p>
+        Oscillating electric and magnetic fields can propagate through space as waves, carrying energy. Visible light, radio waves, microwaves, and X-rays are all examples of electromagnetic waves differing in frequency and wavelength.
+      </p>
+
+      <h3>Applications of Electromagnetism</h3>
+      <ul>
+        <li>Electric circuits and power generation</li>
+        <li>Communication technologies (radio, TV, cell phones)</li>
+        <li>Magnetic resonance imaging (MRI)</li>
+        <li>Electromagnetic radiation in astronomy and optics</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Basics of Physics. All rights reserved.
+  </footer>
 </body>
 </html>
