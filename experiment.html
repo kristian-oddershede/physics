@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiments - Basics of Physics</title>
+  <link rel="stylesheet" href="/physics/styles.css" />
+  <!-- MathJax for rendering LaTeX math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <header>
+    <h1><a href="/physics/index.html" class="home-link">Basics of Physics</a> - Experiments</h1>
+    <div id="nav-placeholder"></div>
+  </header>
+
+  <main>
+    <section>
+      <h2>What are Physics Experiments?</h2>
+      <p>
+        Experiments are the foundation of physics. They test theories, reveal new phenomena, and provide the evidence that shapes our understanding of the universe. From Galileo’s inclined planes to modern particle accelerators, experiments drive progress in physics.
+      </p>
+    </section>
+
+    <section class="main-box">
+      Main thing to know: <br />
+      <strong>Experiments validate theories and uncover the laws of nature.</strong>
+    </section>
+
+    <section>
+      <h2>Famous Physics Experiments</h2>
+
+      <h3>Double-Slit Experiment</h3>
+      <p>
+        Demonstrates the wave-particle duality of light and matter. When particles pass through two slits, they form an interference pattern, showing wave-like behavior.
+      </p>
+      <div class="equation">
+        
+
+\[
+          I(\theta) \propto \cos^2\left(\frac{\pi d \sin \theta}{\lambda}\right)
+        \]
+
+
+        <div class="equation-desc">Interference intensity \( I(\theta) \) depends on slit separation \( d \), wavelength \( \lambda \), and angle \( \theta \).</div>
+      </div>
+
+      <h3>Millikan’s Oil Drop Experiment</h3>
+      <p>
+        Measured the charge of the electron by balancing gravitational and electric forces on tiny oil droplets.
+      </p>
+      <div class="equation">
+        
+
+\[
+          qE = mg
+        \]
+
+
+        <div class="equation-desc">Balance of electric force \( qE \) and gravitational force \( mg \) on a droplet.</div>
+      </div>
+
+      <h3>Cavendish Experiment</h3>
+      <p>
+        Determined the gravitational constant \( G \) by measuring the tiny force between lead spheres.
+      </p>
+      <div class="equation">
+        
+
+\[
+          F = G \frac{m_1 m_2}{r^2}
+        \]
+
+
+        <div class="equation-desc">Gravitational force between masses \( m_1 \) and \( m_2 \) separated by distance \( r \).</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Modern Experimental Physics</h2>
+      <p>
+        Today, experiments range from tabletop optics setups to massive international collaborations. Examples include:
+      </p>
+      <ul>
+        <li>Particle collisions at CERN’s Large Hadron Collider</li>
+        <li>Laser interferometry in LIGO detecting gravitational waves</li>
+        <li>Quantum computing experiments with trapped ions</li>
+        <li>Space-based telescopes measuring cosmic background radiation</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("/physics/footer.html")
+      .then(r => r.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; });
+  </script>
+
+  <script>
+    async function loadNav() {
+      try {
+        const response = await fetch('/physics/nav.html');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const navHTML = await response.text();
+        document.getElementById('nav-placeholder').innerHTML = navHTML;
+  
+        // Highlight the current page link
+        const links = document.querySelectorAll('#nav-placeholder nav a');
+        const currentPage = window.location.pathname.split('/').pop();
+  
+        links.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      } catch (error) {
+        console.error('Failed to load navigation:', error);
+      }
+    }
+    loadNav();
+  </script>
+</body>
+</html>
