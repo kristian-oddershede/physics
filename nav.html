@@ -1,7 +1,6 @@
-<nav id="nav-placeholder"></nav>
+<div id="nav-placeholder"></div>
 
 <script>
-// List of pages in physics-topics folder (simulate directory listing)
 const pages = [
   "mechanics.html",
   "electromagnetism.html",
@@ -12,15 +11,16 @@ const pages = [
   "astrophysics.html"
 ];
 
-// Utility to format filename to readable title
 function formatTitle(filename) {
   return filename
     .replace(".html", "")
     .replace(/_/g, " ")
-    .replace(/\b\w/g, c => c.toUpperCase()); // Capitalize first letters
+    .replace(/\b\w/g, c => c.toUpperCase());
 }
 
-const nav = document.getElementById("nav-placeholder");
+const placeholder = document.getElementById("nav-placeholder");
+
+const nav = document.createElement("nav");
 
 pages.forEach(page => {
   const link = document.createElement("a");
@@ -28,5 +28,6 @@ pages.forEach(page => {
   link.textContent = formatTitle(page);
   nav.appendChild(link);
 });
-</script>
 
+placeholder.appendChild(nav);
+</script>
