@@ -1,0 +1,102 @@
+/* styles.css - shared stylesheet for Physics website */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f0f4f8;
+  color: #222;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #0d3b66;
+  color: #f0f4f8;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f0f4f8;
+  background-color: #145da0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #faa613;
+  color: #0d3b66;
+}
+
+main {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(13, 59, 102, 0.15);
+}
+
+main h2 {
+  color: #0d3b66;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+section {
+  margin-bottom: 1.8rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  color: #666;
+  font-size: 0.9rem;
+  background: #e2e8f0;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+  nav {
+    justify-content: center;
+    width: 100%;
+  }
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
