@@ -208,8 +208,8 @@ footer {
 /* Base Navbar styles */
 .navbar {
   background-color: #333;
+  overflow: visible; /* make sure it doesn't clip dropdown */
   font-family: Arial, sans-serif;
-  overflow: hidden;
 }
 
 .navbar a, .dropbtn {
@@ -219,29 +219,28 @@ footer {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navbar a:hover, .dropdown:hover > .dropbtn {
   background-color: #555;
 }
 
-/* Dropdown container */
 .dropdown {
   float: left;
-  position: relative;
+  position: relative; /* needed for absolute positioning */
 }
 
-/* Dropdown content hidden by default */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #444;
   min-width: 180px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 1000;
+  white-space: nowrap;
 }
 
-/* Dropdown links */
 .dropdown-content a {
   color: white;
   padding: 12px 16px;
@@ -254,7 +253,6 @@ footer {
   background-color: #666;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
