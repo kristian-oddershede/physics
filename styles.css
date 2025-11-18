@@ -44,36 +44,32 @@ header h1 {
   cursor: default;
 }
 
-#nav-placeholder {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start; /* nav buttons aligned to left */
-  gap: 1rem;
-}
-
-/* Navigation styles */
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
 nav a {
   color: #f0f4f8;
-  background-color: #145da0;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-weight: 600;
+  background-color: rgba(20, 93, 160, 0.8);
+  padding: 0.6rem 1.3rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   user-select: none;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(20, 93, 160, 0.4);
 }
 
 nav a:hover,
 nav a.active {
   background-color: #faa613;
   color: #0d3b66;
+  box-shadow: 0 4px 10px rgba(250, 166, 19, 0.6);
+  transform: translateY(-2px);
 }
 
 /* Main content */
