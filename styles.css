@@ -87,6 +87,50 @@ footer {
   user-select: none;
 }
 
+/* New styles for 'Main thing to know' box */
+.main-box {
+  background-color: #fef3c7; /* soft yellow */
+  border: 2px solid #fbbf24; /* amber border */
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 8px rgba(251, 191, 36, 0.3);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #92400e;
+}
+
+/* Equation container */
+.equation {
+  background: #e9f0f7;
+  border-left: 5px solid #0d3b66;
+  padding: 1rem 1.5rem;
+  margin: 1.2rem 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.15rem;
+  color: #0d3b66;
+  border-radius: 4px;
+  user-select: text;
+}
+
+/* Equation description */
+.equation-desc {
+  margin-top: 0.3rem;
+  font-style: italic;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* For formulas inside text */
+.inline-equation {
+  font-family: 'Courier New', Courier, monospace;
+  background: #e9f0f7;
+  padding: 0 0.3rem;
+  border-radius: 3px;
+  color: #0d3b66;
+  user-select: text;
+}
+
 @media (max-width: 600px) {
   header {
     justify-content: center;
@@ -98,5 +142,8 @@ footer {
   main {
     margin: 1rem;
     padding: 1.5rem;
+  }
+  .main-box {
+    font-size: 1rem;
   }
 }
