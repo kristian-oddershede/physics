@@ -46,7 +46,7 @@
   <script>
     async function loadNav() {
       try {
-        const response = await fetch('nav.html');
+        const response = await fetch('/nav.html');
         if (!response.ok) throw new Error('Network response was not ok');
         const navHTML = await response.text();
         document.getElementById('nav-placeholder').innerHTML = navHTML;
