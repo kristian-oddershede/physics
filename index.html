@@ -3,64 +3,36 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Basics of Physics</title>
+<title>Basics of Physics - Home</title>
 <style>
-  /* Reset and base */
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background: #f5f7fa;
-    color: #333;
+    margin: 0; background: #f5f7fa; color: #333;
   }
-  a {
-    text-decoration: none;
-    color: #0366d6;
-    transition: color 0.3s ease;
-  }
-  a:hover {
-    color: #004085;
-  }
-
+  a { text-decoration: none; color: #0366d6; transition: color 0.3s ease; }
+  a:hover { color: #004085; }
   header {
-    background: #1e2a38;
-    color: white;
+    background: #1e2a38; color: white;
     padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
   }
-
-  header h1 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 1.6rem;
-  }
-
+  header h1 { margin: 0; font-weight: 600; font-size: 1.6rem; }
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: flex; flex-wrap: wrap; gap: 1rem;
   }
-
   nav a {
     padding: 0.5rem 1rem;
     background: #2c3e50;
     border-radius: 4px;
     color: white;
     font-weight: 600;
-    cursor: pointer;
     user-select: none;
   }
-  nav a.active,
-  nav a:hover {
+  nav a.active, nav a:hover {
     background: #0366d6;
     color: white;
   }
-
   main {
     max-width: 900px;
     margin: 2rem auto;
@@ -69,31 +41,17 @@
     box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
     border-radius: 8px;
   }
-
-  h2 {
-    color: #1e2a38;
-  }
-
-  p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
+  h2 { color: #1e2a38; }
+  p, ul { line-height: 1.6; margin-bottom: 1rem; }
   footer {
     text-align: center;
     margin: 2rem 0;
     color: #666;
     font-size: 0.9rem;
   }
-
   @media (max-width: 600px) {
-    header {
-      justify-content: center;
-    }
-    nav {
-      justify-content: center;
-      width: 100%;
-    }
+    header { justify-content: center; }
+    nav { justify-content: center; width: 100%; }
   }
 </style>
 </head>
@@ -101,148 +59,41 @@
 
 <header>
   <h1>Basics of Physics</h1>
-  <nav id="navbar">
-    <a href="#" data-page="home" class="active">Home</a>
-    <a href="#" data-page="mechanics">Mechanics</a>
-    <a href="#" data-page="electromagnetism">Electromagnetism</a>
-    <a href="#" data-page="quantum">Quantum Mechanics</a>
-    <a href="#" data-page="thermodynamics">Thermodynamics</a>
-    <a href="#" data-page="nuclear">Nuclear Physics</a>
-    <a href="#" data-page="atomic">Atomic &amp; Optical Physics</a>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="mechanics.html">Mechanics</a>
+    <a href="electromagnetism.html">Electromagnetism</a>
+    <a href="quantum.html">Quantum Mechanics</a>
+    <a href="thermodynamics.html">Thermodynamics</a>
+    <a href="nuclear.html">Nuclear Physics</a>
+    <a href="atomic.html">Atomic &amp; Optical Physics</a>
   </nav>
 </header>
 
-<main id="content">
-  <!-- Content loaded by JavaScript -->
+<main>
+  <h2>Welcome to Physics</h2>
+  <p>Physics is the fundamental science that seeks to understand the nature and properties of matter and energy. It explores the universe's behavior, from the smallest particles to the largest galaxies.</p>
+  <p>Physicists use observation, experimentation, and mathematical models to describe and predict natural phenomena. Its principles underpin many technologies that shape modern life.</p>
+
+  <h3>Key Methodologies of Physics</h3>
+  <ul>
+    <li><strong>Theoretical Analysis:</strong> Developing mathematical models and theories to explain phenomena.</li>
+    <li><strong>Experimental Observation:</strong> Designing and conducting experiments to test hypotheses.</li>
+    <li><strong>Simulation and Computation:</strong> Using computer models to simulate complex systems.</li>
+  </ul>
+
+  <h3>Experiments in Physics</h3>
+  <p>Experiments are critical to validate theories and discover new physical laws. Classic experiments include:</p>
+  <ul>
+    <li>Galileo’s Inclined Plane experiments — studying motion.</li>
+    <li>Young’s Double-Slit experiment — demonstrating the wave nature of light.</li>
+    <li>Millikan Oil Drop experiment — measuring the charge of the electron.</li>
+  </ul>
 </main>
 
 <footer>
   &copy; 2025 Basics of Physics | Created by ChatGPT
 </footer>
-
-<script>
-  // Page content for each section
-  const pages = {
-    home: `
-      <h2>Welcome to Physics</h2>
-      <p>Physics is the fundamental science that seeks to understand the nature and properties of matter and energy. It explores the universe's behavior, from the smallest particles to the largest galaxies.</p>
-      <p>Physicists use observation, experimentation, and mathematical models to describe and predict natural phenomena. Its principles underpin many technologies that shape modern life.</p>
-
-      <h3>Key Methodologies of Physics</h3>
-      <ul>
-        <li><strong>Theoretical Analysis:</strong> Developing mathematical models and theories to explain phenomena.</li>
-        <li><strong>Experimental Observation:</strong> Designing and conducting experiments to test hypotheses.</li>
-        <li><strong>Simulation and Computation:</strong> Using computer models to simulate complex systems.</li>
-      </ul>
-
-      <h3>Experiments in Physics</h3>
-      <p>Experiments are critical to validate theories and discover new physical laws. Classic experiments include:</p>
-      <ul>
-        <li>Galileo’s Inclined Plane experiments — studying motion.</li>
-        <li>Young’s Double-Slit experiment — demonstrating the wave nature of light.</li>
-        <li>Millikan Oil Drop experiment — measuring the charge of the electron.</li>
-      </ul>
-    `,
-
-    mechanics: `
-      <h2>Mechanics</h2>
-      <p>Mechanics is the branch of physics that studies motion and the forces that cause it. It includes classical mechanics, which deals with macroscopic objects, and extends to modern theories like relativistic mechanics.</p>
-      <p>Key concepts include Newton's laws of motion, kinematics, dynamics, energy, and momentum.</p>
-      <p>Mechanics is foundational to engineering, astronomy, and many applied sciences.</p>
-    `,
-
-    electromagnetism: `
-      <h2>Electromagnetism</h2>
-      <p>Electromagnetism studies electric and magnetic fields and their interactions with matter. It explains phenomena like electricity, magnetism, and light as electromagnetic waves.</p>
-      <p>The fundamental equations governing this field are Maxwell’s equations, which unify electricity, magnetism, and optics.</p>
-      <p>Applications include electrical engineering, communication technologies, and modern electronics.</p>
-    `,
-
-    quantum: `
-      <h2>Quantum Mechanics</h2>
-      <p>Quantum mechanics deals with the behavior of matter and energy at atomic and subatomic scales. It introduces concepts like wave-particle duality, uncertainty principle, and quantization.</p>
-      <p>This field revolutionized our understanding of atoms, molecules, and the fundamental forces of nature.</p>
-      <p>Quantum mechanics underpins modern technologies such as semiconductors, lasers, and quantum computing.</p>
-    `,
-
-    thermodynamics: `
-      <h2>Thermodynamics</h2>
-      <p>Thermodynamics studies heat, energy, and work, and how they relate to each other. It describes the laws governing energy transfer and the behavior of systems in equilibrium.</p>
-      <p>The four laws of thermodynamics form the foundation for understanding engines, refrigerators, and many natural processes.</p>
-      <p>This field bridges physics, chemistry, and engineering disciplines.</p>
-    `,
-
-    nuclear: `
-      <h2>Nuclear Physics</h2>
-      <p>Nuclear physics investigates the components and behavior of atomic nuclei. It studies phenomena like radioactivity, nuclear reactions, and the forces holding nuclei together.</p>
-      <p>Applications include nuclear power, medical imaging, and understanding stellar processes like nucleosynthesis.</p>
-    `,
-
-    atomic: `
-      <h2>Atomic &amp; Optical Physics</h2>
-      <p>This field focuses on the structure and behavior of atoms, and how they interact with light. It includes the study of atomic spectra, lasers, and quantum optics.</p>
-      <p>Atomic physics is crucial for precision measurements, atomic clocks, and developing quantum technologies.</p>
-    `
-  };
-
-  // DOM references
-  const contentDiv = document.getElementById('content');
-  const navLinks = document.querySelectorAll('nav a');
-
-  // Function to switch pages
-  function loadPage(page) {
-    if (!pages[page]) page = 'home'; // fallback to home
-
-    // Update content
-    contentDiv.innerHTML = pages[page];
-
-    // Update active link styles
-    navLinks.forEach(link => {
-      if (link.dataset.page === page) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-
-    // Scroll to top
-    window.scrollTo(0,0);
-  }
-
-  // Event listeners on nav links
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const page = link.dataset.page;
-      loadPage(page);
-
-      // Update URL hash without page reload
-      history.pushState({page}, "", `#${page}`);
-    });
-  });
-
-  // Load page from URL hash on page load (or default)
-  function loadFromHash() {
-    const hash = window.location.hash.slice(1);
-    if (hash && pages[hash]) {
-      loadPage(hash);
-    } else {
-      loadPage('home');
-    }
-  }
-
-  window.addEventListener('popstate', e => {
-    if (e.state && e.state.page) {
-      loadPage(e.state.page);
-    } else {
-      loadFromHash();
-    }
-  });
-
-  // Initial load
-  loadFromHash();
-
-</script>
 
 </body>
 </html>
