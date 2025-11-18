@@ -1,33 +1,10 @@
-<div id="nav-placeholder"></div>
-
-<script>
-const pages = [
-  "mechanics.html",
-  "electromagnetism.html",
-  "quantum_mechanics.html",
-  "thermodynamics.html",
-  "nuclear_physics.html",
-  "atomic_optical.html",
-  "astrophysics.html"
-];
-
-function formatTitle(filename) {
-  return filename
-    .replace(".html", "")
-    .replace(/_/g, " ")
-    .replace(/\b\w/g, c => c.toUpperCase());
-}
-
-const placeholder = document.getElementById("nav-placeholder");
-
-const nav = document.createElement("nav");
-
-pages.forEach(page => {
-  const link = document.createElement("a");
-  link.href = `physics-topics/${page}`;
-  link.textContent = formatTitle(page);
-  nav.appendChild(link);
-});
-
-placeholder.appendChild(nav);
-</script>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="physics-topics/mechanics.html">Mechanics</a>
+  <a href="physics-topics/electromagnetism.html">Electromagnetism</a>
+  <a href="physics-topics/quantum_mechanics.html">Quantum Mechanics</a>
+  <a href="physics-topics/thermodynamics.html">Thermodynamics</a>
+  <a href="physics-topics/nuclear_physics.html">Nuclear Physics</a>
+  <a href="physics-topics/atomic_optical.html">Atomic &amp; Optical Physics</a>
+  <a href="physics-topics/astrophysics.html">Astrophysics</a>
+</nav>
