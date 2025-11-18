@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mechanics - Basics of Physics</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- MathJax for rendering LaTeX math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
   <header>
@@ -24,85 +29,94 @@
     <section>
       <h2>What is Mechanics?</h2>
       <p>
-        Mechanics is the branch of physics that deals with the motion of objects and the forces that cause or change this motion. It forms the foundation for understanding how everyday objects behave as well as how celestial bodies move in space. 
-        The study of mechanics can be divided into <strong>classical mechanics</strong>, which focuses on macroscopic objects moving at speeds much less than the speed of light, and relativistic mechanics, which applies when objects move close to the speed of light.
+        Mechanics is the branch of physics concerned with the motion of bodies under the influence of forces. It lays the foundation for understanding how objects move, interact, and respond to forces, from everyday phenomena to complex systems in engineering and astronomy.
       </p>
     </section>
 
     <section class="main-box">
       Main thing to know: <br />
-      <strong>Newton’s Laws of Motion</strong> govern how forces affect motion, and they provide the framework to analyze and predict the behavior of physical systems.
+      <strong>Newton's Laws of Motion</strong> describe the relationship between forces acting on a body and its motion.
     </section>
 
     <section>
       <h2>Key Equations in Mechanics</h2>
 
       <div class="equation">
-        <span>F = m a</span>
-        <div class="equation-desc">Newton's Second Law: Force equals mass times acceleration.</div>
+        \[
+          \mathbf{F} = m \mathbf{a}
+        \]
+        <div class="equation-desc">Newton’s Second Law: The force \( \mathbf{F} \) acting on a mass \( m \) produces an acceleration \( \mathbf{a} \).</div>
       </div>
 
       <p>
-        This fundamental law states that the acceleration <code class="inline-equation">a</code> of an object is proportional to the net force <code class="inline-equation">F</code> applied to it and inversely proportional to its mass <code class="inline-equation">m</code>.
+        This fundamental law explains how forces affect motion.
       </p>
 
       <div class="equation">
-        <span>p = m v</span>
-        <div class="equation-desc">Momentum: the product of mass and velocity.</div>
+        \[
+          \mathbf{p} = m \mathbf{v}
+        \]
+        <div class="equation-desc">Momentum: The momentum \( \mathbf{p} \) of an object is its mass times its velocity \( \mathbf{v} \).</div>
       </div>
 
       <p>
-        Momentum <code class="inline-equation">p</code> is a vector quantity representing the quantity of motion an object has. It is conserved in isolated systems, meaning total momentum before and after interactions remains the same.
+        Momentum is a measure of the quantity of motion.
       </p>
 
       <div class="equation">
-        <span>W = F \cdot d \cdot \cos(\theta)</span>
-        <div class="equation-desc">Work done by a force <code>F</code> moving an object through displacement <code>d</code> at an angle <code>θ</code>.</div>
+        \[
+          \mathbf{F} = \frac{d\mathbf{p}}{dt}
+        \]
+        <div class="equation-desc">Force as the time derivative of momentum.</div>
       </div>
 
       <p>
-        Work is the energy transferred by a force. When the force is in the direction of motion, it increases the object’s kinetic energy.
+        This is a more general form of Newton's Second Law.
       </p>
 
       <div class="equation">
-        <span>K = \frac{1}{2} m v^2</span>
-        <div class="equation-desc">Kinetic Energy: energy of motion.</div>
+        \[
+          W = \mathbf{F} \cdot \mathbf{d}
+        \]
+        <div class="equation-desc">Work: Work done by a force \( \mathbf{F} \) acting over a displacement \( \mathbf{d} \).</div>
       </div>
 
       <p>
-        The kinetic energy <code>K</code> of a mass moving at velocity <code>v</code> shows how much energy is stored due to its motion.
+        Work transfers energy to or from a system.
       </p>
 
       <div class="equation">
-        <span>U = m g h</span>
-        <div class="equation-desc">Gravitational Potential Energy: energy due to an object’s height <code>h</code>.</div>
+        \[
+          K = \frac{1}{2} m v^2
+        \]
+        <div class="equation-desc">Kinetic Energy: Energy due to motion of an object.</div>
       </div>
 
       <p>
-        This is the energy stored by an object as a result of its vertical position in a gravitational field (with <code>g</code> representing gravitational acceleration).
+        Important in understanding energy conservation.
       </p>
+
+      <div class="equation">
+        \[
+          U = m g h
+        \]
+        <div class="equation-desc">Potential Energy: Gravitational potential energy near Earth's surface.</div>
+      </div>
     </section>
 
     <section>
       <h2>Further Details</h2>
-      <h3>Newton’s Laws of Motion</h3>
-      <ol>
-        <li><strong>First law (Inertia):</strong> An object remains at rest or in uniform motion unless acted upon by a net external force.</li>
-        <li><strong>Second law:</strong> The net force on an object equals its mass times acceleration (<code>F = m a</code>).</li>
-        <li><strong>Third law:</strong> For every action, there is an equal and opposite reaction.</li>
-      </ol>
-
-      <h3>Conservation Laws</h3>
-      <p>
-        Conservation of momentum and energy are central principles in mechanics. They allow us to predict the outcomes of collisions and other interactions without knowing all the forces in detail.
-      </p>
-
-      <h3>Types of Mechanics</h3>
+      <h3>Newton's Laws</h3>
       <ul>
-        <li><strong>Statics:</strong> Study of bodies at rest or in equilibrium.</li>
-        <li><strong>Kinematics:</strong> Describes motion without regard to forces.</li>
-        <li><strong>Dynamics:</strong> Studies forces and their effects on motion.</li>
+        <li><strong>First Law:</strong> An object remains at rest or in uniform motion unless acted upon by a force.</li>
+        <li><strong>Second Law:</strong> Force equals mass times acceleration.</li>
+        <li><strong>Third Law:</strong> For every action, there is an equal and opposite reaction.</li>
       </ul>
+
+      <h3>Applications</h3>
+      <p>
+        Mechanics is essential in engineering, biomechanics, astrophysics, and everyday problem solving involving forces and motion.
+      </p>
     </section>
   </main>
 
