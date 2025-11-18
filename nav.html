@@ -1,10 +1,32 @@
-<nav>
-  <a href="index.html">Home</a>
-  <a href="mechanics.html">Mechanics</a>
-  <a href="electromagnetism.html">Electromagnetism</a>
-  <a href="quantum_mechanics.html">Quantum Mechanics</a>
-  <a href="thermodynamics.html">Thermodynamics</a>
-  <a href="nuclear_physics.html">Nuclear Physics</a>
-  <a href="atomic_optical.html">Atomic &amp; Optical Physics</a>
-  <a href="astrophysics.html">Astrophysics</a>
-</nav>
+<nav id="physics-nav"></nav>
+
+<script>
+// List of pages in physics-topics folder (simulate directory listing)
+const pages = [
+  "mechanics.html",
+  "electromagnetism.html",
+  "quantum_mechanics.html",
+  "thermodynamics.html",
+  "nuclear_physics.html",
+  "atomic_optical.html",
+  "astrophysics.html"
+];
+
+// Utility to format filename to readable title
+function formatTitle(filename) {
+  return filename
+    .replace(".html", "")
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase()); // Capitalize first letters
+}
+
+const nav = document.getElementById("physics-nav");
+
+pages.forEach(page => {
+  const link = document.createElement("a");
+  link.href = `physics-topics/${page}`;
+  link.textContent = formatTitle(page);
+  nav.appendChild(link);
+});
+</script>
+
