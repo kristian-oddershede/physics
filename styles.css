@@ -274,3 +274,15 @@ footer {
   font-style: italic;
   user-select: none;
 }
+
+
+/* Header link */
+header h1 a.home-link {
+  color: inherit;          /* keep the header’s text color */
+  text-decoration: none;   /* remove underline */
+}
+
+header h1 a.home-link:hover {
+  color: #faa613;          /* optional hover effect */
+}
+
