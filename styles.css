@@ -150,7 +150,9 @@ footer {
 }
 
 
-/* Physics image container */
+
+
+/* Base physics image container — default is LARGE */
 .physics-img {
   display: block;
   margin: 1.8rem auto;
@@ -162,6 +164,7 @@ footer {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Actual image */
 .physics-img img {
   width: 100%;
   height: auto;
@@ -169,9 +172,23 @@ footer {
   user-select: none;
 }
 
+/* Hover zoom effect */
 .physics-img:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Size modifiers */
+.physics-img.small {
+  max-width: 300px;
+}
+
+.physics-img.medium {
+  max-width: 550px;
+}
+
+.physics-img.large {
+  max-width: 900px; /* Matches your main content width */
 }
 
 /* Optional caption styling */
@@ -183,4 +200,5 @@ footer {
   font-style: italic;
   user-select: none;
 }
+
 
