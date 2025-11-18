@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Particle Physics - Basics of Physics</title>
+  <link rel="stylesheet" href="/physics/styles.css" />
+  <!-- MathJax for rendering LaTeX math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Basics of Physics</h1>
+    <div id="nav-placeholder"></div>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is Particle Physics?</h2>
+      <p>
+        Particle Physics studies the fundamental particles that make up matter and radiation, and the interactions between them through fundamental forces.
+      </p>
+    </section>
+
+    <section class="main-box">
+      Main thing to know: <br />
+      <strong>Elementary particles, quantum fields, and fundamental forces</strong> are central concepts.
+    </section>
+
+    <section>
+      <h2>Key Equations in Particle Physics</h2>
+
+      <div class="equation">
+        \[
+          E^2 = (pc)^2 + (m c^2)^2
+        \]
+        <div class="equation-desc">Energy-momentum relation for a particle with mass \( m \) and momentum \( p \), where \( c \) is the speed of light.</div>
+      </div>
+
+      <div class="equation">
+        \[
+          \mathcal{L} = \bar{\psi}(i \gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+        \]
+        <div class="equation-desc">Simplified form of the Lagrangian density in quantum field theory describing fermions \(\psi\) interacting with gauge fields \(F_{\mu\nu}\).</div>
+      </div>
+
+      <div class="equation">
+        \[
+          \Gamma = \frac{1}{\tau}
+        \]
+        <div class="equation-desc">Decay width \(\Gamma\) is the inverse of the particle's lifetime \(\tau\), characterizing unstable particles.</div>
+      </div>
+
+      <div class="equation">
+        \[
+          \sigma = \frac{\text{Number of events}}{\text{Luminosity}}
+        \]
+        <div class="equation-desc">Cross-section \(\sigma\) quantifies the probability of a particular interaction in a particle collision experiment.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Further Details</h2>
+
+      <h3>Elementary Particles and the Standard Model</h3>
+      <p>
+        Matter is composed of quarks and leptons, while interactions are mediated by gauge bosons like photons, W/Z bosons, and gluons, as described by the Standard Model.
+      </p>
+
+      <h3>Particle Interactions and Forces</h3>
+      <p>
+        The four fundamental forces—gravity, electromagnetism, weak, and strong nuclear forces—govern particle interactions and decay processes.
+      </p>
+
+      <h3>Applications of Particle Physics</h3>
+      <ul>
+        <li>Understanding the universe’s fundamental structure</li>
+        <li>Particle accelerators and collider experiments</li>
+        <li>Development of detectors and measurement techniques</li>
+        <li>Advancements in medical imaging and radiation therapy</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("/physics/footer.html")
+      .then(r => r.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; });
+  </script>
+
+  <script>
+    async function loadNav() {
+      try {
+        const response = await fetch('/physics/nav.html');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const navHTML = await response.text();
+        document.getElementById('nav-placeholder').innerHTML = navHTML;
+
+        // Highlight the current page link
+        const links = document.querySelectorAll('#nav-placeholder nav a');
+        const currentPage = window.location.pathname.split('/').pop();
+
+        links.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      } catch (error) {
+        console.error('Failed to load navigation:', error);
+      }
+    }
+    loadNav();
+  </script>
+
+</body>
+</html>
