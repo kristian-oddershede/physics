@@ -1,86 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Quantum Mechanics - Basics of Physics</title>
-<style>
-  /* Same styles as index.html */
-  * { box-sizing: border-box; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; background: #f5f7fa; color: #333;
-  }
-  a { text-decoration: none; color: #0366d6; transition: color 0.3s ease; }
-  a:hover { color: #004085; }
-  header {
-    background: #1e2a38; color: white;
-    padding: 1rem 2rem;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-  }
-  header h1 { margin: 0; font-weight: 600; font-size: 1.6rem; }
-  nav {
-    display: flex; flex-wrap: wrap; gap: 1rem;
-  }
-  nav a {
-    padding: 0.5rem 1rem;
-    background: #2c3e50;
-    border-radius: 4px;
-    color: white;
-    font-weight: 600;
-    user-select: none;
-  }
-  nav a.active, nav a:hover {
-    background: #0366d6;
-    color: white;
-  }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: white;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
-    border-radius: 8px;
-  }
-  h2 { color: #1e2a38; }
-  p { line-height: 1.6; margin-bottom: 1rem; }
-  footer {
-    text-align: center;
-    margin: 2rem 0;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  @media (max-width: 600px) {
-    header { justify-content: center; }
-    nav { justify-content: center; width: 100%; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantum Mechanics - Basics of Physics</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- MathJax for rendering LaTeX math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
+  <header>
+    <h1>Basics of Physics</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mechanics.html">Mechanics</a>
+      <a href="electromagnetism.html">Electromagnetism</a>
+      <a href="quantum_mechanics.html" class="active">Quantum Mechanics</a>
+      <a href="thermodynamics.html">Thermodynamics</a>
+      <a href="nuclear_physics.html">Nuclear Physics</a>
+      <a href="atomic_optical.html">Atomic &amp; Optical Physics</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Basics of Physics</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="mechanics.html">Mechanics</a>
-    <a href="electromagnetism.html">Electromagnetism</a>
-    <a href="quantum.html" class="active">Quantum Mechanics</a>
-    <a href="thermodynamics.html">Thermodynamics</a>
-    <a href="nuclear.html">Nuclear Physics</a>
-    <a href="atomic.html">Atomic &amp; Optical Physics</a>
-  </nav>
-</header>
+  <main>
+    <section>
+      <h2>What is Quantum Mechanics?</h2>
+      <p>
+        Quantum Mechanics is the branch of physics that studies the behavior of matter and energy at the smallest scales — atoms, electrons, photons, and other fundamental particles. Unlike classical physics, quantum mechanics introduces concepts like wave-particle duality, quantization of energy, and inherent uncertainties.
+      </p>
+    </section>
 
-<main>
-  <h2>Quantum Mechanics</h2>
-  <p>Quantum mechanics deals with the behavior of matter and energy at atomic and subatomic scales. It introduces concepts like wave-particle duality, uncertainty principle, and quantization.</p>
-  <p>This field revolutionized our understanding of atoms, molecules, and the fundamental forces of nature.</p>
-  <p>Quantum mechanics underpins modern technologies such as semiconductors, lasers, and quantum computing.</p>
-</main>
+    <section class="main-box">
+      Main thing to know: <br />
+      <strong>The Schrödinger Equation</strong> governs the probabilistic evolution of quantum systems.
+    </section>
 
-<footer>
-  &copy; 2025 Basics of Physics | Created by ChatGPT
-</footer>
+    <section>
+      <h2>Key Equations in Quantum Mechanics</h2>
 
+      <div class="equation">
+        \[
+          i \hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) = \hat{H} \Psi(\mathbf{r}, t)
+        \]
+        <div class="equation-desc">The Time-Dependent Schrödinger Equation: describes how the quantum state \( \Psi \) evolves over time.</div>
+      </div>
+
+      <p>
+        Here, \( \hbar \) is the reduced Planck constant, \( \hat{H} \) is the Hamiltonian operator representing the total energy, and \( \Psi \) is the wavefunction encoding the system's state.
+      </p>
+
+      <div class="equation">
+        \[
+          \hat{H} = -\frac{\hbar^2}{2m} \nabla^2 + V(\mathbf{r})
+        \]
+        <div class="equation-desc">Hamiltonian operator for a single particle with mass \( m \) in potential \( V(\mathbf{r}) \).</div>
+      </div>
+
+      <div class="equation">
+        \[
+          \langle \hat{O} \rangle = \int \Psi^*(\mathbf{r}, t) \hat{O} \Psi(\mathbf{r}, t) \, d^3r
+        \]
+        <div class="equation-desc">Expectation value of an observable \( \hat{O} \), calculated as the integral over the wavefunction.</div>
+      </div>
+
+      <div class="equation">
+        \[
+          \Delta x \, \Delta p \geq \frac{\hbar}{2}
+        \]
+        <div class="equation-desc">Heisenberg’s Uncertainty Principle: position \( x \) and momentum \( p \) cannot both be precisely known.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Further Details</h2>
+
+      <h3>Wave-Particle Duality</h3>
+      <p>
+        Particles such as electrons exhibit both wave-like and particle-like properties, depending on how they are measured.
+      </p>
+
+      <h3>Probabilistic Nature</h3>
+      <p>
+        Quantum mechanics provides probabilities of finding particles in certain states or positions, rather than definite outcomes.
+      </p>
+
+      <h3>Applications of Quantum Mechanics</h3>
+      <ul>
+        <li>Semiconductors and transistors (the basis of modern electronics)</li>
+        <li>Quantum computing</li>
+        <li>Laser technology</li>
+        <li>Atomic clocks and precision measurement</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Basics of Physics. All rights reserved.
+  </footer>
 </body>
 </html>
