@@ -14,15 +14,7 @@
 <body>
   <header>
     <h1>Basics of Physics</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="mechanics.html">Mechanics</a>
-      <a href="electromagnetism.html">Electromagnetism</a>
-      <a href="quantum_mechanics.html" class="active">Quantum Mechanics</a>
-      <a href="thermodynamics.html">Thermodynamics</a>
-      <a href="nuclear_physics.html">Nuclear Physics</a>
-      <a href="atomic_optical.html">Atomic &amp; Optical Physics</a>
-    </nav>
+    <div id="nav-placeholder"></div>
   </header>
 
   <main>
@@ -100,5 +92,29 @@
   <footer>
     &copy; 2025 Basics of Physics. All rights reserved.
   </footer>
+  <script>
+    async function loadNav() {
+      try {
+        const response = await fetch('nav.html');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const navHTML = await response.text();
+        document.getElementById('nav-placeholder').innerHTML = navHTML;
+  
+        // Highlight the current page link
+        const links = document.querySelectorAll('#nav-placeholder nav a');
+        const currentPage = window.location.pathname.split('/').pop();
+  
+        links.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      } catch (error) {
+        console.error('Failed to load navigation:', error);
+      }
+    }
+    loadNav();
+  </script>
+
 </body>
 </html>
