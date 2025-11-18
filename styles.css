@@ -148,3 +148,39 @@ footer {
     font-size: 1rem;
   }
 }
+
+
+/* Physics image container */
+.physics-img {
+  display: block;
+  margin: 1.8rem auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.physics-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+}
+
+.physics-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional caption styling */
+.img-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.5rem;
+  font-style: italic;
+  user-select: none;
+}
+
