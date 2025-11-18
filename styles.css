@@ -18,125 +18,124 @@ body {
 }
 
 /* --- Refined Header --- */
+/* --- Modern Header --- */
 header {
   background: linear-gradient(135deg, #0d3b66 0%, #145da0 100%);
-  color: #f0f4f8;
-  padding: 1rem 3rem;
+  color: #fff;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 6px 20px rgba(13, 59, 102, 0.3);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  user-select: none;
   position: sticky;
   top: 0;
   z-index: 1000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* Main title */
 header h1 {
   margin: 0;
-  font-weight: 900;
-  font-size: 2.4rem;
-  letter-spacing: 1.5px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
-  cursor: default;
-  user-select: none;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
-/* Nav container to hold buttons */
-#nav-placeholder {
-  flex: 1;
+/* Navigation */
+.navbar {
   display: flex;
-  justify-content: flex-start;
-  gap: 1rem;
 }
 
-/* Navigation base */
-nav {
+.nav-list {
+  list-style: none;
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-/* Buttons style */
-nav a, .dropbtn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px; /* fixed width for all buttons */
-  padding: 0.5rem 0;
-  color: #f0f4f8;
-  background-color: #145da0;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
+.nav-item,
+.dropbtn {
+  color: #fff;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease, border-color 0.3s ease;
-  user-select: none;
-  cursor: pointer;
-  box-shadow: 0 3px 8px rgba(20, 93, 160, 0.5);
-  border: 2px solid transparent;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: none;
-  background-clip: padding-box;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hover and active states */
-nav a:hover,
-nav a.active,
-.dropbtn:hover {
-  background-color: #faa613;
+.nav-item:hover,
+.dropbtn:hover,
+.nav-item.active {
+  background: #faa613;
   color: #0d3b66;
-  box-shadow: 0 4px 12px rgba(250, 166, 19, 0.7);
-  border-color: #faa613;
 }
 
-/* Dropdown base */
+/* Dropdown */
 .dropdown {
-  position: relative; /* needed for absolute positioning */
+  position: relative;
 }
 
-/* Dropdown content */
-.dropdown-content {
+.dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #444;
-  min-width: 180px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000;
-  white-space: nowrap;
-  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  background: #145da0;
+  border-radius: 6px;
+  min-width: 200px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
   padding: 0.5rem 0;
 }
 
-/* Dropdown links */
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #fff;
   text-decoration: none;
-  display: block;
-  text-align: left;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-/* Dropdown link hover */
-.dropdown-content a:hover {
-  background-color: #666;
+.dropdown-menu a:hover {
+  background: #faa613;
+  color: #0d3b66;
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
+/* Show dropdown */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
   display: block;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item,
+  .dropbtn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    min-width: 100%;
+  }
+}
+
 
 /* Main content */
 main {
@@ -215,44 +214,6 @@ footer {
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  /* Header responsive tweaks */
-  header {
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  header h1 {
-    text-align: center;
-    flex: unset;
-  }
-
-  #nav-placeholder {
-    justify-content: center;
-    flex: unset;
-  }
-
-  nav {
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  nav a, .dropbtn {
-    width: 100%; /* full width buttons on mobile */
-    text-align: center;
-  }
-
-  .dropdown-content {
-    position: relative;
-    top: 0;
-    left: 0;
-    box-shadow: none;
-    min-width: 100%;
-    border-radius: 0 0 8px 8px;
-  }
-
   main {
     margin: 1rem;
     padding: 1.5rem;
@@ -263,18 +224,7 @@ footer {
   }
 }
 
-/* Further refine buttons on very small devices */
-@media (max-width: 480px) {
-  nav a, .dropbtn {
-    width: 100px;
-    font-size: 0.9rem;
-    padding: 0.45rem 0;
-  }
 
-  header {
-    padding: 1rem 1.5rem;
-  }
-}
 
 /* Base physics image container — default is LARGE */
 .physics-img {
