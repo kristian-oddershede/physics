@@ -17,14 +17,20 @@ body {
   flex-direction: column;
 }
 
+/* --- Updated header --- */
 header {
   background-color: #0d3b66;
   color: #f0f4f8;
-  padding: 1rem 2rem;
+  padding: 1rem 0; /* removed horizontal padding */
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3rem; /* match main content horizontal padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 header h1 {
@@ -32,8 +38,18 @@ header h1 {
   font-weight: 700;
   font-size: 1.8rem;
   user-select: none;
+  text-align: right; /* aligns title's right edge with container's left edge */
+  flex: 1;
 }
 
+#nav-placeholder {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* nav buttons aligned to left */
+  gap: 1rem;
+}
+
+/* Navigation styles */
 nav {
   display: flex;
   gap: 1rem;
@@ -58,6 +74,7 @@ nav a.active {
   color: #0d3b66;
 }
 
+/* Main content */
 main {
   flex-grow: 1;
   max-width: 900px;
@@ -133,6 +150,24 @@ footer {
 }
 
 @media (max-width: 600px) {
+  /* Header responsive tweaks */
+  .header-container {
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  header h1 {
+    text-align: center;
+    flex: unset;
+  }
+
+  #nav-placeholder {
+    justify-content: center;
+    flex: unset;
+  }
+
+  /* Other responsive tweaks */
   header {
     justify-content: center;
   }
@@ -148,9 +183,6 @@ footer {
     font-size: 1rem;
   }
 }
-
-
-
 
 /* Base physics image container — default is LARGE */
 .physics-img {
@@ -200,10 +232,6 @@ footer {
   font-style: italic;
   user-select: none;
 }
-
-
-
-
 
 /* Base Navbar styles */
 .navbar {
@@ -256,6 +284,3 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-
-
