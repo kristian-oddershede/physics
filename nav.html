@@ -1,4 +1,4 @@
-<nav id="nav-placerholder"></nav>
+<nav id="nav-placeholder"></nav>
 
 <script>
 // List of pages in physics-topics folder (simulate directory listing)
@@ -20,7 +20,7 @@ function formatTitle(filename) {
     .replace(/\b\w/g, c => c.toUpperCase()); // Capitalize first letters
 }
 
-const nav = document.getElementById("physics-nav");
+const nav = document.getElementById("nav-placeholder");
 
 pages.forEach(page => {
   const link = document.createElement("a");
