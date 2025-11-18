@@ -202,3 +202,72 @@ footer {
 }
 
 
+
+
+
+/* Navbar container */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Nav links */
+.navbar .nav-item,
+.dropbtn {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Change color on hover */
+.navbar .nav-item:hover,
+.dropdown:hover .dropbtn {
+  background-color: #555;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Hover effect on dropdown links */
+.dropdown-content a:hover {
+  background-color: #666;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
