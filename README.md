@@ -1,8 +1,13 @@
-# Physics
-Physics basics collected on one test website, the most useful formulas and such.
+# Physics Website
 
-<section>
-  <a href="/physics/files/trigidentity.pdf" class="pdf-download" download>
-    Download More Trig. Identities
-  </a>
-</section>
+##### Basics of Physics:
+The site contains the most useful formulas and such, to supplement univeristy studies in physics.
+
+##### Website architecture:
+The site is relatively simple structure, with things added along the way, as I learned how to make websites.
+You are welcome to take inspiration in the code, but **not allowed** to re-distribute all the specific material I have added on site.
+For the concrete materials, all rights are reserved. 
+
+##### External materials:
+The icon for the website found through Freepik. 
+Otherwise materials on the website, that I have not made myself, is always have direct references on the site. 
