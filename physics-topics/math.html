@@ -1,1 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mathematics - Basics of Physics</title>
+  <link rel="stylesheet" href="/physics/styles.css" />
+  <!-- MathJax for rendering LaTeX math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <header>
+    <h1><a href="/physics/index.html" class="home-link">Basics of Physics</a> - Mathematics</h1>
+    <div id="nav-placeholder"></div>
+  </header>
 
+  <main>
+    <section>
+      <h2>Why Mathematics Matters in Physics</h2>
+      <p>
+        Mathematics is the language of physics. To describe motion, forces, energy, and waves, physicists rely on mathematical tools such as trigonometry and calculus. 
+        A solid foundation in these areas is essential for understanding and solving problems in mechanics, electromagnetism, quantum physics, and beyond.
+      </p>
+    </section>
+
+    <section class="main-box">
+      Main thing to know: <br />
+      <strong>Trigonometry and Calculus</strong> are the backbone of introductory physics. They allow us to model oscillations, waves, fields, and rates of change.
+    </section>
+
+    <section>
+      <h2>Trigonometric Identities</h2>
+      <p>
+        Trigonometry is used extensively in physics to describe oscillations, circular motion, and wave phenomena. 
+        Here are some of the most useful identities:
+      </p>
+
+      <div class="equation">
+        
+
+\[
+          \sin^2 \theta + \cos^2 \theta = 1
+        \]
+
+
+        <div class="equation-desc">Pythagorean Identity</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \tan \theta = \frac{\sin \theta}{\cos \theta}
+        \]
+
+
+        <div class="equation-desc">Definition of tangent</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \sin(2\theta) = 2 \sin \theta \cos \theta
+        \]
+
+
+        <div class="equation-desc">Double-angle formula for sine</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \cos(2\theta) = \cos^2 \theta - \sin^2 \theta
+        \]
+
+
+        <div class="equation-desc">Double-angle formula for cosine</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \sin^2 \theta = \frac{1 - \cos(2\theta)}{2}, \quad
+          \cos^2 \theta = \frac{1 + \cos(2\theta)}{2}
+        \]
+
+
+        <div class="equation-desc">Power-reduction identities</div>
+      </div>
+
+      <p>
+        These identities are especially useful when working with integrals of trigonometric functions or simplifying wave equations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Basic Derivatives</h2>
+      <p>
+        Derivatives measure rates of change. In physics, they describe velocity, acceleration, and how fields vary in space and time.
+      </p>
+
+      <div class="equation">
+        
+
+\[
+          \frac{d}{dx} (x^n) = n x^{n-1}
+        \]
+
+
+        <div class="equation-desc">Power rule</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \frac{d}{dx} (\sin x) = \cos x, \quad
+          \frac{d}{dx} (\cos x) = -\sin x
+        \]
+
+
+        <div class="equation-desc">Derivatives of sine and cosine</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \frac{d}{dx} (e^x) = e^x
+        \]
+
+
+        <div class="equation-desc">Exponential function derivative</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \frac{d}{dx} (\ln x) = \frac{1}{x}
+        \]
+
+
+        <div class="equation-desc">Natural logarithm derivative</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \frac{d}{dx} [f(x) g(x)] = f'(x) g(x) + f(x) g'(x)
+        \]
+
+
+        <div class="equation-desc">Product rule</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \frac{d}{dx} \left[ \frac{f(x)}{g(x)} \right] = \frac{f'(x) g(x) - f(x) g'(x)}{[g(x)]^2}
+        \]
+
+
+        <div class="equation-desc">Quotient rule</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+        \]
+
+
+        <div class="equation-desc">Chain rule</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Basic Integrals</h2>
+      <p>
+        Integrals measure accumulation. In physics, they describe displacement from velocity, work from force, and probability distributions.
+      </p>
+
+      <div class="equation">
+        
+
+\[
+          \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)
+        \]
+
+
+        <div class="equation-desc">Power rule for integration</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \int e^x \, dx = e^x + C
+        \]
+
+
+        <div class="equation-desc">Exponential integral</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \int \frac{1}{x} \, dx = \ln |x| + C
+        \]
+
+
+        <div class="equation-desc">Logarithmic integral</div>
+      </div>
+
+      <div class="equation">
+        
+
+\[
+          \int \sin x \, dx = -\cos x + C, \quad
+          \int \cos x \, dx = \sin x + C
+        \]
+
+
+        <div class="equation-desc">Trigonometric integrals</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Applications in Physics</h2>
+      <h3>Oscillations and Waves</h3>
+      <p>
+        Trigonometric functions describe oscillatory motion such as springs and pendulums. 
+        Wave equations often involve sine and cosine functions, and their derivatives give velocity and acceleration of oscillations.
+      </p>
+
+      <h3>Motion and Kinematics</h3>
+      <p>
+        Derivatives connect position, velocity, and acceleration:
+        
+
+\[
+          v(t) = \frac{dx}{dt}, \quad a(t) = \frac{d^2x}{dt^2}
+        \]
+
+
+      </p>
+
+      <h3>Energy and Work</h3>
+      <p>
+        Integrals are used to calculate work done by a force:
+        
+
+\[
+          W = \int F \cdot dx
+        \]
+
+
+      </p>
+
+      <h3>Probability and Quantum Mechanics</h3>
+      <p>
+        Integrals are essential in quantum mechanics for normalizing wavefunctions and calculating probabilities.
+      </p>
+
+    </section>
+
+    <section>
+      <h2>Fourier Analysis Essentials</h2>
+      <p>
+        Fourier analysis is the study of representing functions or signals as sums of sinusoidal components. 
+        It is fundamental in physics for analyzing waves, vibrations, and quantum states. 
+        The key idea: any reasonably well-behaved function can be expressed as a combination of sines and cosines.
+      </p>
+    
+      <h3>Fourier Series (Periodic Functions)</h3>
+      <p>
+        For a function \( f(x) \) with period \( 2\pi \), the Fourier series expansion is:
+      </p>
+      <div class="equation">
+        
+    
+    \[
+          f(x) = a_0 + \sum_{n=1}^{\infty} \left[ a_n \cos(nx) + b_n \sin(nx) \right]
+        \]
+    
+    
+        <div class="equation-desc">Decomposition of a periodic function into harmonics.</div>
+      </div>
+    
+      <p>
+        The coefficients are given by:
+      </p>
+      <div class="equation">
+        
+    
+    \[
+          a_0 = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \, dx
+        \]
+    
+    
+        
+    
+    \[
+          a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(nx) \, dx
+        \]
+    
+    
+        
+    
+    \[
+          b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(nx) \, dx
+        \]
+    
+    
+        <div class="equation-desc">Formulas for Fourier coefficients.</div>
+      </div>
+    
+      <h3>Fourier Transform (Non-Periodic Functions)</h3>
+      <p>
+        For functions defined on the whole real line, the Fourier transform generalizes the Fourier series:
+      </p>
+      <div class="equation">
+        
+    
+    \[
+          F(k) = \int_{-\infty}^{\infty} f(x) \, e^{-i k x} \, dx
+        \]
+    
+    
+        <div class="equation-desc">Forward Fourier transform: converts a time/space function into frequency space.</div>
+      </div>
+    
+      <div class="equation">
+        
+    
+    \[
+          f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(k) \, e^{i k x} \, dk
+        \]
+    
+    
+        <div class="equation-desc">Inverse Fourier transform: reconstructs the original function from its frequency components.</div>
+      </div>
+    
+      <h3>Applications in Physics</h3>
+      <ul>
+        <li><strong>Wave analysis:</strong> Decomposing complex vibrations into simple harmonics.</li>
+        <li><strong>Quantum mechanics:</strong> Position and momentum wavefunctions are Fourier transforms of each other.</li>
+        <li><strong>Signal processing:</strong> Filtering and analyzing frequency content of signals.</li>
+        <li><strong>Optics:</strong> Diffraction and interference patterns are naturally described using Fourier transforms.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("/physics/footer.html")
+      .then(r => r.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; });
+  </script>
+
+  <script>
+    async function loadNav() {
+      try {
+        const response = await fetch('/physics/nav.html');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const navHTML = await response.text();
+        document.getElementById('nav-placeholder').innerHTML = navHTML;
+  
+        // Highlight the current page link
+        const links = document.querySelectorAll('#nav-placeholder nav a');
+        const currentPage = window.location.pathname.split('/').pop();
+  
+        links.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      } catch (error) {
+        console.error('Failed to load navigation:', error);
+      }
+    }
+    loadNav();
+  </script
