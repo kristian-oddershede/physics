@@ -316,3 +316,56 @@ header h1 a.home-link:hover {
   font-size: 1.2rem;
 }
 
+
+
+/* Suggestions box styling */
+.suggestion-box {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.suggestion-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-box label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.suggestion-box input,
+.suggestion-box textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.suggestion-box textarea {
+  resize: vertical;
+}
+
+.suggestion-box button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-box button:hover {
+  background-color: #0066cc;
+}
+
+
