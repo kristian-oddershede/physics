@@ -7,6 +7,41 @@
   <link rel="stylesheet" href="/physics/styles.css" />
 </head>
 <body>
+  <!-- 🔐 Password Overlay -->
+  <div id="password-overlay">
+    <div class="password-box">
+      <h2>Adgangskode kræves</h2>
+      <p class="subtitle">Indtast adgangskoden for at få adgang til siden</p>
+      <input type="password" id="site-password" placeholder="Adgangskode" />
+      <button onclick="checkSitePassword()">🔓 Log ind</button>
+      <p id="password-error"></p>
+    </div>
+  </div>
+
+  <script>
+    const SITE_PASSWORD = "niels_bohr";
+
+    function hideOverlay() {
+      document.getElementById("password-overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    function checkSitePassword() {
+      const input = document.getElementById("site-password").value;
+      const error = document.getElementById("password-error");
+
+      if (input === SITE_PASSWORD) {
+        hideOverlay();
+      } else {
+        error.innerText = "Forkert adgangskode. Prøv igen.";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.overflow = "hidden";
+    });
+  </script>
+  
   <header>
     <h1><a href="/physics/index.html" class="home-link">Basics of Physics</a> - Suggestions</h1>
     <div id="nav-placeholder"></div>
