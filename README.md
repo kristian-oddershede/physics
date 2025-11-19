@@ -10,4 +10,4 @@ For the concrete materials, all rights are reserved.
 
 ##### External materials:
 The icon for the website found through Freepik. 
-Otherwise materials on the website, that I have not made myself, is always have direct references on the site. 
+Otherwise materials on the website, that I have not made myself, always have direct references on the site. 
