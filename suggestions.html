@@ -10,16 +10,16 @@
   <!-- 🔐 Password Overlay -->
   <div id="password-overlay">
     <div class="password-box">
-      <h2>Adgangskode kræves</h2>
-      <p class="subtitle">Indtast adgangskoden for at få adgang til siden</p>
-      <input type="password" id="site-password" placeholder="Adgangskode" />
-      <button onclick="checkSitePassword()">🔓 Log ind</button>
+      <h2>Are you a robot?</h2>
+      <p class="subtitle">Type the code "CeRn" to get to the Suggestions-page (to avoid spam)</p>
+      <input type="password" id="site-password" placeholder="Password" />
+      <button onclick="checkSitePassword()">🔓 Log-in</button>
       <p id="password-error"></p>
     </div>
   </div>
 
   <script>
-    const SITE_PASSWORD = "niels_bohr";
+    const SITE_PASSWORD = "CeRn";
 
     function hideOverlay() {
       document.getElementById("password-overlay").style.display = "none";
