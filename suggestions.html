@@ -6,42 +6,7 @@
   <title>Suggestions - Basics of Physics</title>
   <link rel="stylesheet" href="/physics/styles.css" />
 </head>
-<body>
-  <!-- 🔐 Password Overlay -->
-  <div id="password-overlay">
-    <div class="password-box">
-      <h2>Are you a robot?</h2>
-      <p class="subtitle">Type the code "CeRn" to get to the Suggestions-page (to avoid spam)</p>
-      <input type="password" id="site-password" placeholder="Password" />
-      <button onclick="checkSitePassword()">🔓 Log-in</button>
-      <p id="password-error"></p>
-    </div>
-  </div>
-
-  <script>
-    const SITE_PASSWORD = "CeRn";
-
-    function hideOverlay() {
-      document.getElementById("password-overlay").style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-
-    function checkSitePassword() {
-      const input = document.getElementById("site-password").value;
-      const error = document.getElementById("password-error");
-
-      if (input === SITE_PASSWORD) {
-        hideOverlay();
-      } else {
-        error.innerText = "Wrong code. Use small and big letters.";
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.overflow = "hidden";
-    });
-  </script>
-  
+<body>  
   <header>
     <h1><a href="/physics/index.html" class="home-link">Basics of Physics</a> - Suggestions</h1>
     <div id="nav-placeholder"></div>
@@ -57,18 +22,8 @@
     </section>
 
     <section class="suggestion-box">
-      <form action="mailto:kristian.possum@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Your Name (optional):</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" />
-
-        <label for="email">Your Email (optional):</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" />
-
-        <label for="suggestion">Your Suggestion:</label>
-        <textarea id="suggestion" name="suggestion" rows="6" placeholder="Write your suggestion here..." required></textarea>
-
-        <button type="submit">Send Suggestion</button>
-      </form>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOHJsRE4hjvnyhZeyNgIESbTfvI5_Dn2es3PqNNUhOUWmzxA/viewform?embedded=true" 
+        width="640" height="470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
   </main>
 
